@@ -1,0 +1,8 @@
+#! /bin/sh
+
+if [ -z "$@" ]; then
+  echo "helo $0"
+else
+  echo "helo -> $@"
+fi
+
