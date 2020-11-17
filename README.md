@@ -37,7 +37,7 @@ set-zsh-env
 ```
 
 ## *macdown* - opens markdown file from terminal with *macdown*
-**prerequisite:** installed macdown on mac -> [macdown](https://macdown.uranusjr.com/).
+**prerequisite:** installed macdown on mac -> [macdown](https://macdown.uranusjr.com/){:target="_blank" rel="noopener"}
 
 ```shell script
 macdown README.md
