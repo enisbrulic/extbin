@@ -1,0 +1,4 @@
+#! /bin/sh 
+
+echo 'export PATH="$PATH:/usr/local/extbin"' >> ~/.zshrc
+
