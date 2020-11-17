@@ -1,13 +1,16 @@
 # extbin
 compilation of small shell scripts. git clone `extbin` -> `/usr/local`
 
+## init
 ```shell script
 cd /usr/local
-sudo git clone git@github.com:enisbrulic/extbin.git
-sudo chmod a+x /usr/local/extbin/*
-sudo chown -R $(whoami) /usr/local/extbin
+sudo mkdir extbin && sudo chown -R $(whoami) extbin
+git clone git@github.com:enisbrulic/extbin.git
+/usr/local/extbin/set-zsh-env
+source ~/.zshrc
 ```
 
+---
 ## *i* - starts intellij in new window
 cd -> an intellij project  
 ```shell script
