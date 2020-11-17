@@ -49,3 +49,9 @@ macdown README.md
 add-vimrc-config
 ```
 
+## *nn* - newnote opens new file 
+
+```shell script
+nn notes.md
+```
+

@@ -1,0 +1,9 @@
+#! /bin/sh
+
+if [ -z "$@" ]; then
+  echo "please provide a new filename e.g. `basename "$0"` mynote.md"
+  exit 0
+else
+  echo "# $1 \n## start here" >> $1
+  vim -c $ +startinsert +put_ +"normal! $" $1
+fi

@@ -1,7 +1,7 @@
 #! /bin/sh
 
 if [ -z "$@" ]; then
-  echo "please provide a new filename e.g. $0 myscript.sh"
+  echo "please provide a new filename e.g. `basename "$0"` myscript.sh"
   exit 0
 else
   echo "#! /bin/sh \n\n" >> $1
