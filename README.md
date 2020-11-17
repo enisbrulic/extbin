@@ -43,3 +43,9 @@ set-zsh-env
 macdown README.md
 ```
 
+## *add-vimrc-config* - appends some vim configs -> ~/.vimrc
+
+```shell script
+add-vimrc-config
+```
+

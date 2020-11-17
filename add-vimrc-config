@@ -1,0 +1,4 @@
+#! /bin/sh 
+
+echo "syntax on\n:hi Comment ctermfg=LightBlue\n:set number" >> ~/.vimrc
+
