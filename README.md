@@ -55,3 +55,9 @@ add-vimrc-config
 nn notes.md
 ```
 
+## *myip* - list own public ip address
+
+```shell script
+myip
+```
+
