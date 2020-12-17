@@ -61,3 +61,9 @@ nn notes.md
 myip
 ```
 
+## *delete-completed-pods* - delete pods in completed state within an openshift project scope
+
+```shell script
+delete-completed-pods <openshift-project-name>
+```
+
