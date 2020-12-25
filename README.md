@@ -5,7 +5,7 @@ compilation of small shell scripts. git clone `extbin` -> `/usr/local`
 ```shell script
 cd /usr/local
 sudo mkdir extbin && sudo chown -R $(whoami) extbin
-git clone git@github.com:enisbrulic/extbin.git
+git clone https://github.com/enisbrulic/extbin.git
 /usr/local/extbin/set-zsh-env
 source ~/.zshrc
 ```
