@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ -z $1 ]; then
+  echo "usage: `basename "$0"` <my-oc-project>"
+else
+count=$(oc get pods -owide -n $1 | awk '($3=="NodeAffinity")' | wc -l)
+  if [ $count == 0 ]
+  then
+     echo "currently no pods found with completed state in project $1."
+  else
+     oc project $1
+     oc get pods -owide -n $1 | awk '($3=="NodeAffinity")' | awk '{ print $1 }' | xargs -n 1 sh -c 'oc delete pod $0'
+     echo "-> $count pod(s) deleted successfully on project $1"
+  fi
+fi
+

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ -z $1 ]; then
+  echo "usage: `basename "$0"` <my-oc-project>"
+else
+count=$(oc get pipelinerun -owide -n $1 | awk '($3=="PipelineRunTimeout")' | wc -l)
+  if [ $count == 0 ]
+  then
+     echo "currently no pods found with Complete state in project $1."
+  else
+     oc project $1
+     oc get pipelinerun -owide -n $1 | awk '($3=="PipelineRunTimeout")' | awk '{ print $1 }' | xargs -n 1 sh -c 'oc delete pipelinerun $0'
+     echo "-> $count pipelinerun(s) deleted successfully on project $1"
+  fi
+fi
+
